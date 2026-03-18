@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selihom Abel | Architecture Portfolio</title>
+    <style>
+        :root {
+            --primary-purple: #8a2be2; /* Your branding purple */
+            --dark-purple: #2d0050;
+            --bg-black: #050505;
+            --text-light: #f4f4f4;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--bg-black);
+            color: var(--text-light);
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation */
+        nav {
+            background: rgba(10, 0, 20, 0.95);
+            padding: 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid var(--primary-purple);
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary-purple);
+        }
+
+        /* Hero Section */
+        header {
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to bottom, var(--dark-purple), var(--bg-black));
+            padding-top: 80px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            letter-spacing: 5px;
+            color: var(--primary-purple);
+        }
+
+        /* Slideshow Container */
+        .slideshow-wrapper {
+            max-width: 1000px;
+            height: 500px;
+            margin: 40px auto;
+            position: relative;
+            overflow: hidden;
+            border: 3px solid var(--primary-purple);
+            border-radius: 5px;
+        }
+
+        .slide {
+            display: none;
+            width: 100%;
+            height: 100%;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Content Sections */
+        .section {
+            padding: 80px 10%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        h2 {
+            color: var(--primary-purple);
+            font-size: 2rem;
+            border-bottom: 1px solid var(--dark-purple);
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        /* Aesthetic Personal Photo Box */
+        .personal-container {
+            background: var(--dark-purple);
+            padding: 20px;
+            border-radius: 15px;
+            border: 1px solid var(--primary-purple);
+            box-shadow: 0 10px 30px rgba(138, 43, 226, 0.2);
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .personal-container img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.4s ease, filter 0.4s ease;
+            filter: grayscale(30%);
+        }
+
+        .personal-container img:hover {
+            transform: scale(1.03);
+            filter: grayscale(0%);
+        }
+
+        /* Responsive grid for mobile */
+        @media (max-width: 768px) {
+            .personal-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Contact Links */
+        .contact-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .contact-item {
+            margin: 20px 0;
+            font-size: 1.2rem;
+        }
+
+        .contact-item a {
+            color: var(--primary-purple);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            border-top: 1px solid var(--dark-purple);
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <header id="home">
+        <h1>SELIHOM ABEL</h1>
+        <p>Future Architect | Visual Designer</p>
+    </header>
+
+    <div class="section">
+        <h2>Architecture Gallery</h2>
+        <div class="slideshow-wrapper">
+            <div class="slide"><img src="https://images.unsplash.com/photo-1511818566587-0ce7a2c6a13a?q=80&w=1000" alt="Building 1"></div>
+            <div class="slide"><img src="https://images.unsplash.com/photo-1503387762-592dea58ef21?q=80&w=1000" alt="Blueprint 1"></div>
+            <div class="slide"><img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1000" alt="Building 2"></div>
+            <div class="slide"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1000" alt="Skyscraper"></div>
+            <div class="slide"><img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1000" alt="Sketch"></div>
+            <div class="slide"><img src="https://images.unsplash.com/photo-1518005020251-58296b97467d?q=80&w=1000" alt="Modern Structure"></div>
+        </div>
+    </div>
+
+    <section class="section" id="about">
+        <h2>About Me</h2>
+        
+        <div class="personal-container">
+            <img src="yatch.jpg" alt="Project Yacht"> 
+            <img src="ice.jpg" alt="Ice Concept">
+            <img src="self.jpg" alt="Selihom Abel">
+        </div>
+
+        <p style="margin-top: 40px; font-size: 1.1rem; border-left: 3px solid var(--primary-purple); padding-left: 20px;">
+            I am <b>Selihom Abel</b>, a teenager driven by the passion for structural design and architectural aesthetics. 
+            My vision is to master the art of blueprints and sketches to build the cities of tomorrow. 
+            I am currently exploring the intersection of modern minimalism and functional living spaces.
+        </p>
+    </section>
+
+    <section class="section" id="contact">
+        <h2>Contact Me</h2>
+        <ul class="contact-list">
+            <li class="contact-item">Email: <a href="mailto:selihomabel3@gmail.com">selihomabel3@gmail.com</a></li> 
+            <li class="contact-item">Instagram: <a href="https://instagram.com/s3lih0m.4" target="_blank">@s3lih0m.4</a></li>
+            <li class="contact-item">Phone: <a href="tel:+251987534810">+251 987 534 810</a></li>
+        </ul>
+    </section>
+
+    <footer>
+        &copy; 2026 Selihom Abel. All Rights Reserved.
+    </footer>
+
+    <script>
+        let slideIndex = 0;
+        carousel();
+
+        function carousel() {
+            let i;
+            let x = document.getElementsByClassName("slide");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > x.length) {slideIndex = 1}
+            x[slideIndex-1].style.display = "block";
+            setTimeout(carousel, 3000); 
+        }
+    </script>
+</body>
+</html>
